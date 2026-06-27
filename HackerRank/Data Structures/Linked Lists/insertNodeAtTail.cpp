@@ -30,7 +30,7 @@ class Solution {
             return head;
         }
 
-        void display(Node *head)
+        void printLinkedList(Node *head)
         {
             Node *start=head;
             
@@ -41,3 +41,20 @@ class Solution {
         }
 };
 
+int main() {
+    Node* head=NULL;
+    
+    Solution myList;
+    
+    int T, data;
+    cin >> T;
+
+    while (T-->0) {
+        cin >> data;
+        head=myList.insertNodeAtTail(head, data);
+    }
+
+    myList.printLinkedList(head);
+
+    return 0;
+}
