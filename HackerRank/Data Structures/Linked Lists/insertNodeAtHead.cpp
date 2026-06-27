@@ -48,7 +48,7 @@ int main() {
 
     while (T-->0) {
         cin >> data;
-        head=myList.insert(head, data);
+        head=myList.insertNodeAtHead(head, data);
     }
 
     myList.display(head);
