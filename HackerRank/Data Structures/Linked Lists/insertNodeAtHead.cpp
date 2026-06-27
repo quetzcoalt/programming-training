@@ -27,7 +27,7 @@ class Solution {
             return head;
         }
 
-        void display(Node *head)
+        void printLinkedList(Node *head)
         {
             Node *start=head;
             
@@ -51,7 +51,7 @@ int main() {
         head=myList.insertNodeAtHead(head, data);
     }
 
-    myList.display(head);
+    myList.printLinkedList(head);
 
     return 0;
 }
