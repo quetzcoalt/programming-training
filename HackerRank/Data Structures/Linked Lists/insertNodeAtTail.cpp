@@ -41,21 +41,3 @@ class Solution {
         }
 };
 
-int main() {
-    Node* head=NULL;
-    
-    Solution myList;
-    
-    int T, data;
-    cin >> T;
-
-    while (T-->0) {
-        cin >> data;
-        head=myList.insertNodeAtHead(head, data);
-    }
-
-    myList.display(head);
-
-    return 0;
-}
-
