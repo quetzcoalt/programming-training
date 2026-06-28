@@ -27,6 +27,25 @@ class Solution {
             return head;
         }
 
+        Node* insertNodeAtPosition(Node* head, int data, int position) {
+            Node *newNode = new Node(data);
+            newNode->next = NULL;
+
+            if (head == NULL) return newNode;
+
+            Node *current, *pre = head;
+
+            for (int i = 0; i < position; i++) {
+                pre = current;
+                current = current->next;
+            }
+
+            pre->next = newNode;
+            newNode->next = current;
+
+            return head;
+        }
+
         void printLinkedList(Node *head)
         {
             Node *start=head;
