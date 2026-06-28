@@ -15,6 +15,24 @@ class Node {
 
 class Solution {
     public:
+        Node* deleteNode(Node *head, int position) {
+            if (head == NULL) return head;
+
+            if (position == 0) return head->next;
+
+            Node *pre = head;
+            Node *current = head;
+
+            for (int i = 0; i < position; i++) {
+                pre = current;
+                current = current->next;
+            }
+
+            pre->next = current->next;
+
+            return head;
+        }
+        
         Node* insertNodeAtPosition(Node* head, int data, int position) {
             Node *newNode = new Node(data);
             newNode->next = NULL;
