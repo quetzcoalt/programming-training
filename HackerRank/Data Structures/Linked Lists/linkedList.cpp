@@ -92,6 +92,18 @@ class Solution {
 
             cout << endl;
         }
+
+        void reversePrint(Node* head) {
+            vector<int> reversed = {};
+            Node *start = head;
+
+            while (start) {
+                reversed.insert(reversed.begin(), start->data);
+                start = start->next;
+            }
+
+            for (int e : reversed) cout << e << endl;
+        }
 };
 
 int main() {
